@@ -103,7 +103,7 @@ const resolvers = {
         .then((json) => json.data.movies);
     },
     movie(_, { id }) {
-      return fetch(`https://yts.mx/api/v2/list_movies.json?movie_id=${id}`)
+      return fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         .then((r) => r.json())
         .then((json) => json.data.movie);
     },
